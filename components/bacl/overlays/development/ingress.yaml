@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: bacl
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: bacl
+    app.kubernetes.io/part-of: byoc-app-zvvm
+  name: bacl
+spec:
+  rules:
+  - host: bacl-byoc-yvvd-tenant.apps.2eaba3a1713c352a1f8e.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: bacl
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}

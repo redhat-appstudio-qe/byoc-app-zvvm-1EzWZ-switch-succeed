@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: bacl
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: POC
+          value: POC
+        image: quay.io/redhat-appstudio-qe/byoc-yvvd-tenant/byoc-app-zvvm/bacl@sha256:70d6a69b038085f3e0e1c0c8f3c66d1acd3c1edbfa432eed0cee20067804a5ce
+        name: my-java-quarkus
+        resources: {}
+status: {}
