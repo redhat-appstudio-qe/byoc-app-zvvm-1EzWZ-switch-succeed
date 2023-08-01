@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: bacl
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-yvvd-tenant/byoc-app-zvvm/bacl@sha256:70d6a69b038085f3e0e1c0c8f3c66d1acd3c1edbfa432eed0cee20067804a5ce
         name: my-java-quarkus
         ports:
         - containerPort: 8081
